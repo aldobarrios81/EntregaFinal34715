@@ -1,8 +1,9 @@
 import React from 'react';
 import CartWidget from './CartWidget'
+
 // import CartWidget  from '../Components/CartWidget';
 
-const NavBar = () => {
+const NavBar = () => { 
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
     <div className="container-fluid">
@@ -21,6 +22,7 @@ const NavBar = () => {
           </li>
           <li>
           { <CartWidget /> }
+       
           </li>
           
         </ul>
