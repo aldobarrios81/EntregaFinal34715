@@ -3,14 +3,12 @@ import './ItemList.css'
 import productos from './AsyncMock'
 
 function consultarPromesa(confirmacion) {
-    return new Promise ((res,rej) => {
+    return new Promise ((res) => {
             if(confirmacion) {
                 setTimeout(() => {
                 res(productos)
             }, 2000)
-            } else {
-                rej("Acceso denegado")
-            }
+            } 
     })
 }
 const Productos = () => {
