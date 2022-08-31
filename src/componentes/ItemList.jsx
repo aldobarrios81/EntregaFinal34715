@@ -5,7 +5,9 @@ import productos from './AsyncMock'
 function consultarPromesa(confirmacion) {
     return new Promise ((res,rej) => {
             if(confirmacion) {
+                setTimeout(() => {
                 res(productos)
+            }, 2000)
             } else {
                 rej("Acceso denegado")
             }
