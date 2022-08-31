@@ -1,0 +1,11 @@
+.boton{
+    display: block;
+    margin: auto;
+    width: 100px;
+    height: 20px;
+    padding: 0
+}
+
+.botonred{
+    background-color: red;
+}
