@@ -12,7 +12,7 @@ function consultarPromesa(confirmacion) {
     })
 }
 const Productos = () => {
-    const [getProducts, setProductos] = useState([]);
+    const [productos, setProductos] = useState([]);
     useEffect(() => {                  
         consultarPromesa(true)
       
@@ -38,7 +38,7 @@ const Productos = () => {
     }, []);
     return (
         <div className='row'>
-            {getProducts}
+            {productos}
         </div>
     );
 }
