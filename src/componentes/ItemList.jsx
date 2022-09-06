@@ -26,6 +26,7 @@ const Productos = () => {
                         <p className="card-text">Marca: {producto.marca}</p>
                         <img src={"./img/" + producto.image} className='card-img-top' alt="" />
                         <p className="card-text">Precio: ${producto.precio}</p>
+                       
                         <button className='btn btn-primary'><Link className='nav-link' to={"/productos/" + producto.id}>Ver</Link> </button>
                 </div>
             </div>
