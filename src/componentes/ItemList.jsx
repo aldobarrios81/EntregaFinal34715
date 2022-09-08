@@ -27,7 +27,7 @@ const Productos = () => {
                         <img src={"./img/" + producto.image} className='card-img-top' alt="" />
                         <p className="card-text">Precio: ${producto.precio}</p>
                        
-                        <button className='btn btn-primary'><Link className='nav-link' to={"/productos/" + producto.id}>Ver</Link> </button>
+                        <button className='btn btn-primary'><Link className='nav-link' to={"/item/" + producto.id}>Ver</Link> </button>
                 </div>
             </div>
             )

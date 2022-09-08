@@ -1,23 +1,25 @@
 import React from 'react'
 import './App.css';
-import NavBar from './componentes/NavBar';
+import Navbar from './componentes/NavBar';
 import ItemListContainer from './componentes/ItemListContainer'
 import Footer from './componentes/footer';
 import ItemDetails from './componentes/ItemDetails'
+
+
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-// import productos from './DATA/productos'
-// import ItemListContainer from './Components/ItemListContainer'
 
 function App() {
 
   return (
     <>
-     <NavBar/>  
-    <BrowserRouter>
+  
+     <Navbar/>  
+     <BrowserRouter>
          <Routes>
-            <Route path="/"  element={<ItemListContainer greeting="Bienvenidos a Tequilas Mexico"/>} />
-            <Route path="/productos/:id" element={<ItemDetails/>}></Route>
-        
+            <Route exact path="/"  element={<ItemListContainer greeting="Bienvenidos a Tequilas Mexico"/>} />
+            <Route exact path="/item/:id" element={<ItemDetails/>}></Route>  
+            <Route exact path="/Categoria/:Categoria" element={<ItemListContainer/>}></Route>  
+       
          </Routes>
     </BrowserRouter>
     <Footer />

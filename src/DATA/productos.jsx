@@ -12,7 +12,7 @@ const productos =[
        "Categoria":"Tequila ",
        "marca":"Jimador",
        "precio":100,
-       "image": 'Tequila.jpg',
+       "image": 'Jimador.webp',
        "stock":10
     },
     {
@@ -20,7 +20,7 @@ const productos =[
        "Categoria":"Tequila ",
        "marca":"Cazadores",
        "precio":150,
-       "image": 'Tequila.jpg',
+       "image": 'cazadores.webp',
        "stock":15
     },
     {
@@ -28,7 +28,7 @@ const productos =[
        "Categoria":"Tequila ",
        "marca":"Tradicional",
        "precio":300,
-       "image": 'Tequila.jpg',
+       "image": 'Tradicional.webp',
        "stock":12
     },
     {
@@ -36,7 +36,7 @@ const productos =[
        "Categoria":"Ron ",
        "marca":"Viejo de Caldas",
        "precio":125,
-       "image": 'Tequila.jpg',
+       "image": 'viejo_caldas.webp',
        "stock":13
     },
     {
@@ -44,7 +44,7 @@ const productos =[
        "Categoria":"Ron ",
        "marca":"Medellin",
        "precio":200,
-       "image": 'Tequila.jpg',
+       "image": 'medellin.png',
        "stock":12
     },
     {
@@ -52,7 +52,7 @@ const productos =[
        "Categoria":"Ron ",
        "marca":"Flor de Caña",
        "precio":150,
-       "image": 'Tequila.jpg',
+       "image": 'flor_de_caña.jpg',
        "stock":5
     },
     {
@@ -60,7 +60,7 @@ const productos =[
        "Categoria":"Cerveza ",
        "marca":"Corona",
        "precio":15,
-       "image": 'Tequila.jpg',
+       "image": 'corona.webp',
        "stock":10
     },
     {
@@ -68,7 +68,7 @@ const productos =[
        "Categoria":"Cerveza ",
        "marca":"Sol",
        "precio":15,
-       "image": 'Tequila.jpg',
+       "image": 'sol.jpg',
        "stock":8
     },
     {
@@ -76,7 +76,7 @@ const productos =[
        "Categoria":"Cerveza ",
        "marca":"Victoria",
        "precio":10,
-       "image": 'Tequila.jpg',
+       "image": 'victoria.webp',
        "stock":10
     }
  ]

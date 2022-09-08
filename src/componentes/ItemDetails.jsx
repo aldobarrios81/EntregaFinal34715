@@ -4,33 +4,51 @@ import productos from '../DATA/productos'
 import ItemCount from './ItemCount'
 import { useParams } from 'react-router-dom';
 
-console.log(useParams)
 function consultarPromesa(confirmacion) {
     return new Promise ((res) => {
             if(confirmacion) {
                 setTimeout(() => {
                 res(productos)
-            }, 1)
+            }, 2000)
             } 
     })
 }
 
-
 const Productos = () => {
+    const [cantidad, setCantidad] = useState(1);
     const [producto, setProductoCard] = useState([]);
     const {id} = useParams()
-    console.log(id)
  
+
+
     useEffect(() => {                  
         consultarPromesa(true)
         .then(data => {
-          console.log()
           const producto1 = data.find(producto => producto.id == id)
-          console.log(producto1)
+  
           setProductoCard(producto1)
+        
        
       })
-    }, []);
+    }, [id]);
+    const cantidadProducto = (operacion) => {
+        if(operacion == "+") {
+            if(cantidad < producto.stock) {
+                setCantidad(cantidad + 1)
+            }
+        } else {
+            if(cantidad > 1) {
+                setCantidad(cantidad - 1)
+            }
+        }
+    }
+
+    const agregarAlCarrito=(producto, cantidad) => {
+    
+        const productoCarrito = {id: producto.id, cantidad: cantidad} 
+        console.log(productoCarrito)
+    }
+
     return (
       <>
       <div className="card mb-3" style={{maxWidth: '540px'}}>
@@ -44,11 +62,14 @@ const Productos = () => {
                  <p className="card-text">Marca: {producto.marca} </p>
                  <p className="card-text">Stock: {producto.stock} </p>
                  <p className="card-text">Precio: ${producto.precio} </p>
-                 <ItemCount />
-                 <button className='btn btn-dark'>Add</button>
+                 <p>cantidad: {cantidad}</p>
+                 <button className='btn btn-primary boton' onClick={() => cantidadProducto("+")}> +</button>
+                 <button className='btn btn-secondary boton botonred'  onClick={() => cantidadProducto("-")}>-</button>
+                 
+                 <button className='btn btn-dark' onClick={() => agregarAlCarrito(producto, cantidad)}>Add</button>
              </div>
          </div>
-     </div>
+     </div> 
      </div>
      </>
     );
